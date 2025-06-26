@@ -1,0 +1,21 @@
+{
+  "ActiveProposalsLimiterProposalValidationStrategy": "0x1F2eDC7811EE7318f7BDDF0c0CE0d6D26b21C771",
+  "AvatarExecutionStrategyImplementation": "0x3E7eD188A5cDc15C03527308735f22724084cFA8",
+  "CompTimelockCompatibleExecutionStrategyImplementation": "0x47b65B0695d2D2FDE0fe081266E20e374A260555",
+  "CompVotingStrategy": "0x4433165dAd4DeCcad9710D163Fb55c896289f432",
+  "EthSigAuthenticator": "0xe2a885Ee727CEC01872601584F49B2471A11150A",
+  "EthTxAuthenticator": "0xD590Dc5E3cDae3482b3A2e5Dd4dB8D78B9c9F995",
+  "MerkleWhitelistVotingStrategy": "0x32586F6bcf6649C9e31990AAB83071D28623154b",
+  "OZVotesVotingStrategy": "0x087bF99d9070Cf1cF341f44af10002cEd50546EC",
+  "OptimisticCompTimelockCompatibleExecutionStrategyImplementation": "0x3f38cd1cFF51f07584b170b923fAe62fcc3Ab923",
+  "OptimisticTimelockExecutionStrategyImplementation": "0x706674562F0f75728efdB77566fa638EB095de5F",
+  "PropositionPowerAndActiveProposalsLimiterValidationStrategy": "0x155b3A04faBf0B1Ec8b9FcB03f99D942FA8000Fe",
+  "PropositionPowerProposalValidationStrategy": "0x6Ca82805618dD1D6A789Ec13b7A8b04Af69A718f",
+  "ProxyFactory": "0x0ED522c515927DAcB86Ae4d42d0756c191f4D5d4",
+  "SpaceImplementation": "0xc786bf2a39DEDB32718dE65408E6922831fF1017",
+  "TimelockExecutionStrategyImplementation": "0xaec66d7930B701cbB77987C8B97022e381a44798",
+  "VanillaAuthenticator": "0x3FA22810bCBa1D04dDeCb538fAA1806D80dB7FC1",
+  "VanillaProposalValidationStrategy": "0x4cB3791dcbEFB986309e66fBadf68b8e52A3F81f",
+  "VanillaVotingStrategy": "0x7D619Bdc41Df7F36DdEeda5Bd38D1e1fDAEfB4Dc",
+  "WhitelistVotingStrategy": "0xfd04c77448fce7dc8637C859E556819Ac350F725"
+}

@@ -244,16 +244,24 @@ contract Deployer is Script {
         vm.stopBroadcast();
     }
 
-    // Deploys contract if it doesn't exist, otherwise returns the create2 address
-    function noRedeploy(bytes memory _initCode, uint256 _saltNonce) internal returns (address, bool) {
-        bytes32 salt = keccak256(abi.encodePacked(address_salt, _saltNonce));
-        address addy = computeCreate2Address(salt, keccak256(_initCode), address(singletonFactory));
-        if (addy.code.length == 0) {
-            address _addy = singletonFactory.deploy(_initCode, salt);
-            assert(_addy == addy);
-            return (addy, true);
-        } else {
-            return (addy, false);
+    function noRedeploy(
+        bytes memory _initCode,
+        uint256 _saltNonce
+    ) internal returns (address addr, bool success) {
+        // ← deterministic salt: address + nonce»
+        // bytes32 salt = keccak256(abi.encodePacked(address(this), _saltNonce));
+
+        assembly {
+            let codePtr  := add(_initCode, 0x20)
+            let codeSize := mload(_initCode)
+
+            // CREATE2: value=0, codePtr, codeSize, salt
+            addr := create(0, codePtr, codeSize)
+
+            // success = extcodesize(addr) > 0
+            success := gt(extcodesize(addr), 0)
         }
+
+        require(success, "DEPLOY_FAILED");
     }
 }
